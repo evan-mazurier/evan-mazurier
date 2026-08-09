@@ -27,9 +27,13 @@ Anything blocking becomes a question rather than a guess. Work lands on its own 
 
 ---
 
-## Also
+## The brake tool
 
-Owned a MATLAB → Python re-architecture end to end at **Alstom**, from the legacy model to the shipped tool.
+**A MATLAB → Python re-architecture I owned end to end**, for the brake engineering team at a European rolling stock manufacturer. 73,500 lines, 682 tests, six months, sole developer — and nobody on the team could read the code, so the tests and the benchmark campaign were the only reviewer the project had.
+
+Other engineers have since used it on a real train programme to regenerate a braking specification.
+
+→ **[brake-tool-migration](https://github.com/evan-mazurier/brake-tool-migration)** — the write-up. No code: that part isn't mine to publish.
 
 ---
 
