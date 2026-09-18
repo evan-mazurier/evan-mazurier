@@ -43,15 +43,15 @@ Other engineers have since used it on a real train programme to regenerate a bra
 
 The checks caught two things a "looks right" pass would have missed: the residual gap to the 1982 reference is *their* discretisation error, not the solver's (it plateaus while the solver keeps converging), and one printed value in the paper's table is wrong — kept verbatim, flagged, and shown as such.
 
-Next: a neural surrogate trained on solver runs, with its error measured inside *and* outside the training range. A surrogate is a validated shortcut, not a replacement for physics.
+Then two surrogates trained on 86 solver runs and judged on Reynolds numbers they never saw. The classical one — 20 POD modes and a spline — reproduces the solver to **2e-6** in about a millisecond, a 40,000–400,000× speed-up; a 500k-parameter neural network reaches 0.7% and invents flow features that aren't there. Both degrade the moment they leave the training range, and the error-vs-Re plot says so rather than hiding it. A surrogate is a validated shortcut, not a replacement for physics.
 
-→ **[cavity-surrogate](https://github.com/evan-mazurier/cavity-surrogate)**
+→ **[Live demo](https://evan-mazurier.github.io/cavity-surrogate/)** — drag the Reynolds number, watch the fluid move, check the prediction against the solver · **[cavity-surrogate](https://github.com/evan-mazurier/cavity-surrogate)**
 
 ---
 
 ### Stack
 
-`Python` · `numpy` · `pytest` · `TypeScript` · `React` · `SQLite` · `MATLAB`
+`Python` · `numpy` · `PyTorch` · `pytest` · `TypeScript` · `React` · `SQLite` · `MATLAB`
 
 ### Looking for
 
