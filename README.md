@@ -19,9 +19,9 @@ queued → scoping → [human confirms the contract] → coding → test gate
        → review → ready → [human merges] → merged
 ```
 
-Anything blocking becomes a question rather than a guess. Work lands on its own branch, and nothing reaches `main` without passing its gate.
+Anything blocking becomes a question rather than a guess. Work lands on its own branch, and nothing reaches `main` without passing its gate. An event ledger measures the gate itself — tokens, rework, reverts — so the question "is this cheaper model good enough for this role?" is answered by data, not faith.
 
-**12,920 lines · 507 tests**
+**14,145 lines of Python · 555 tests**
 
 → **[Atlas](https://github.com/evan-mazurier/atlas)**
 
@@ -37,13 +37,25 @@ Other engineers have since used it on a real train programme to regenerate a bra
 
 ---
 
+## cavity-surrogate
+
+**A 2D Navier–Stokes solver written from the equations up, and proven right before anything is built on it.** The lid-driven cavity — the benchmark every CFD code is checked against — solved with a projection method on a staggered grid in pure numpy. Divergence-free to 1e-14, second-order grid convergence measured, centreline profiles within 0.5% of Ghia et al. (1982) at Re 100 / 400 / 1000.
+
+The checks caught two things a "looks right" pass would have missed: the residual gap to the 1982 reference is *their* discretisation error, not the solver's (it plateaus while the solver keeps converging), and one printed value in the paper's table is wrong — kept verbatim, flagged, and shown as such.
+
+Next: a neural surrogate trained on solver runs, with its error measured inside *and* outside the training range. A surrogate is a validated shortcut, not a replacement for physics.
+
+→ **[cavity-surrogate](https://github.com/evan-mazurier/cavity-surrogate)**
+
+---
+
 ### Stack
 
-`Python` · `TypeScript` · `React` · `SQLite` · `pytest`
+`Python` · `numpy` · `pytest` · `TypeScript` · `React` · `SQLite` · `MATLAB`
 
 ### Looking for
 
-Agentic / AI engineering roles, remote in the EU. Available from **January 2027**.
+Entry-level roles where the job is **building AI workflows or engineering tools**: AI operations / agentic-workflow engineering, applied AI inside an engineering or industrial company, or calculation, simulation and validation tooling. **Relocating to Switzerland** — Zurich, Lausanne–Geneva, Bern, Basel. **Available from October 2026.** French native · English C1 · German B2.
 
 ### Elsewhere
 
