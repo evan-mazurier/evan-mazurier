@@ -49,6 +49,16 @@ Then two surrogates trained on 86 solver runs and judged on Reynolds numbers the
 
 ---
 
+## alpine-descent
+
+**A train coming down the Gotthard north ramp — traction, ETCS-style braking curves, and the brake discs that carry what the electric brake cannot — as one verified chain.** A generic 200 t regional unit descends 634 m in 28.6 km at 26 ‰, stopping at every station. The run-time simulation, the supervision curves in the shape of Subset-026 (braking parabolas integrated backwards through the grade under the train) and a brake-disc thermal model with the Eurocode steel heat capacity all read the same line and the same train, and every layer is checked against a closed form before the next one builds on it: balancing speed, coasting, an energy ledger that closes to 1e-5, the exact exponential and the erfc solution of the disc.
+
+What the chain says: with the electric brake the descent is a net *generator* and the discs stay under 70 °C; without it one disc must take 54 MJ and reaches **615 °C**, because cooling gives back only a fifth of it in the 24 minutes available — the electric brake *is* the thermal design of the train. And an emergency stop on those discs is a surface problem: the rubbing face runs 60 K ahead of anything a lumped model can see, which is the number the 1-D layer exists for.
+
+→ **[Live demo](https://evan-mazurier.github.io/alpine-descent/)** — set the electric brake share, watch the discs heat, pull the emergency brake; the page runs the same equations in the browser and checks itself against the Python chain · **[alpine-descent](https://github.com/evan-mazurier/alpine-descent)**
+
+---
+
 ### Stack
 
 `Python` · `numpy` · `PyTorch` · `pytest` · `TypeScript` · `React` · `SQLite` · `MATLAB`
