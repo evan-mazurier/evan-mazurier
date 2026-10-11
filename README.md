@@ -21,7 +21,7 @@ session → hooks (guards + record) → hash-chained ledger → daily anchor on 
 
 Every event goes into a hash-chained ledger, anchored daily on a public GitHub repo so a later edit is detectable. The ledger's first-pass rate per type of work, next to usage per role and model, answers "is this cheaper model good enough for this role?" with data, not faith.
 
-**~11,000 lines of Python · 1,588 tests**
+**~11,000 lines of Python · 1,500+ tests**
 
 → **[Atlas](https://github.com/evan-mazurier/atlas)** · **[atlas-anchor](https://github.com/evan-mazurier/atlas-anchor)**: one hash per ledger day
 
